@@ -22,7 +22,10 @@ end
 
 get("/") do
 
-  @recipe = getRecipe()
+  erb(:home)
+end
 
+get("/search") do
+  @recipe = getRecipe()
   erb(:recipe)
 end

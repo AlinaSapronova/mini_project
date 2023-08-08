@@ -1,13 +1,28 @@
-<div class="recipe">
+<body>
+
+   <div class='form'>
+        <form method="post" action="/recipe_search">
+          <input class="search" placeholder="Search..."/>
+              <button class='btn'>FIND</button>
+        </form>
+      </div>
+
 <div class="recipe_box">
   <% @recipe.each do |item| %>
+  <div>
 <h3 class="label"> <%= item["recipe"]["label"] %> </h3>
-<img src="<%= item["recipe"]["image"] %>" alt="recipe" width=300px/>
-<p class="label"> <% item["recipe"]["ingredientLines"].each do |ing| %></p>
+</div>
 
+<div>
+<img src="<%= item["recipe"]["image"] %>" alt="recipes" width=350px/>
+</div>
+
+<div>
+ <% item["recipe"]["ingredientLines"].each do |ing| %>
 <p class="label"><%=ing%></p>
-
 <%end%>
   <%end%>
 </div>
+
 </div>
+</body>
