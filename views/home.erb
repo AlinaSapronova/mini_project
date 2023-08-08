@@ -7,10 +7,25 @@
 
          <div class='form'>
         <form method="post" action="/recipe_search">
-          <input class="search" placeholder="Search..."/>
+          <input class="search" name="search_term" id="search_term" type="text"/>
               <button class='btn'>FIND</button>
         </form>
       </div>
+
+
+<div class="recipe_box">
+<%@recipe.each do |items|%>
+<p><%items.each do |rec|%></p>
+<p><%rec.each do |item|%></p>
+<p><%= item["label"] %></p>
+<img src= <%= item["image"] %>>
+<%end%>
+<%end%>
+<%end%>
+</div>
+
+
+
 
 
 </body>
