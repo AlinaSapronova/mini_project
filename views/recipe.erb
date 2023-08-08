@@ -1,0 +1,13 @@
+<div class="recipe">
+<div class="recipe_box">
+  <% @recipe.each do |item| %>
+<h3 class="label"> <%= item["recipe"]["label"] %> </h3>
+<img src="<%= item["recipe"]["image"] %>" alt="recipe" width=300px/>
+<p class="label"> <% item["recipe"]["ingredientLines"].each do |ing| %></p>
+
+<p class="label"><%=ing%></p>
+
+<%end%>
+  <%end%>
+</div>
+</div>

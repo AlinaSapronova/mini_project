@@ -1,6 +1,7 @@
 
 <body>
 
+
         <div class='header'>
         <h1>Find your favorite recipe!</h1>
       </div>
@@ -12,15 +13,9 @@
         </form>
       </div>
 
-<div class="container">
-<div class="recipe">
 
-<% @recipe.each do |item| %>
-<p class="label"> <%= item["recipe"]["label"] %> </p>
-<img src="<%= item["recipe"]["image"] %>" alt="recipe" width=300px/>
-<%end%>
-</div>
-</div>
+
+
 
 
 </body>

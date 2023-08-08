@@ -24,5 +24,5 @@ get("/") do
 
   @recipe = getRecipe()
 
-  erb(:home)
+  erb(:recipe)
 end
