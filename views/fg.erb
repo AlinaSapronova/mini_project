@@ -1,11 +1,5 @@
-<div>
-<button class="find"><a href="/" class="find">Go back </a><button>
-</div>
-
-
-
 <div class="card" style="width: 18rem;">
-<% @results.each do |item| %>
+<% @recipe.each do |item| %>
   <img src="<%= item["recipe"]["image"] %>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%= item["recipe"]["label"] %> </h5>

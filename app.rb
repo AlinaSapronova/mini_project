@@ -21,7 +21,7 @@ end
 
 
 get("/") do
-@recipe = getRecipe()
+
   erb(:home)
 end
 
@@ -36,9 +36,7 @@ post("/recipe_search"){
   request = Net::HTTP::Get.new(url) 
   response = Net::HTTP.get(uri)
   response_obj = JSON.parse(response)
-  results = response_obj.fetch("hits")
-  @recipe = results
+  @results = response_obj.fetch("hits")
 
   erb(:recipe)
-
 }
