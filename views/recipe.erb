@@ -1,14 +1,19 @@
-<div>
-<button class="find"><a href="/" class="find">Go back </a><button>
+<div class="button">
+ <a href="/" class="find">Go back </a>
 </div>
 
-
-
-<div class="card" style="width: 18rem;">
-<% @results.each do |item| %>
-  <img src="<%= item["recipe"]["image"] %>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= item["recipe"]["label"] %> </h5>
-  </div>
-   <%end%>
+<div class="container">
+   <div class="row justify-content-center">
+      <% @results.each do |item| %>
+      <div class="col-md-6 col-lg-4 mb-4">
+         <div class="card" style="max-width: 15rem;">
+            <img src="<%= item["recipe"]["image"] %>" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title"><%= item["recipe"]["label"] %> </h5>
+            </div>
+         </div>
+      </div>
+      <%end%>
+   </div>
 </div>
+>
